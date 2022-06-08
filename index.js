@@ -1,21 +1,21 @@
-// Code your solution in this file!
-let returnFirstTwoDrivers = (FirstTwo) => FirstTwo.slice(0, 2)
+// Code your solution in this file!phase-1-first-class-functions-lab
+const returnFirstTwoDrivers = (FirstTwo)=>FirstTwo.slice(0, 2)
 
-let returnLastTwoDrivers = (FirstTwo) => FirstTwo.slice(FirstTwo.length-2)
+const returnLastTwoDrivers = (FirstTwo) => FirstTwo.slice(FirstTwo.length-2)
 
 let selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
 
-let createFareMultiplier = (mult) => ((fare) => fare * mult)
+let createFareMultiplier = (multiplier) => ((fare) => fare * multiplier)
 
-let fareDoubler = (fare) => createFareMultiplier(2)(fare);
+const fareDoubler = (fare) => createFareMultiplier(2)(fare);
 
 let fareTripler = (fare) => createFareMultiplier(3)(fare);
 
 
-function selectDifferentDrivers(FirstTwo, func){
-    if (func === returnFirstTwoDrivers){
+function selectDifferentDrivers(FirstTwo, either){
+    if (either === returnFirstTwoDrivers){
         return returnFirstTwoDrivers(FirstTwo)
-    }else if(func === returnLastTwoDrivers){
+    }else if (either === returnLastTwoDrivers){
         return returnLastTwoDrivers(FirstTwo)
     }
 }
